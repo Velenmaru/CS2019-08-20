@@ -34,19 +34,18 @@ import java.util.Scanner;
 
 */
 class TaskC3 {
-    public static void main(String[] args) {{{{
-        Scanner in = new Scanner(System.in);
-        System.out.println("Input a number");
-        int num = in.nextInt();
-        double a = 3.86;
-        double w = 9.81;
-        double q = num * a / w;
-        {
+   static double getWeight(int me) {
+        double mm100 = me * 3.86 / 9.81*100;
+        int mm100int = (int) mm100;
+        double delta = mm100 - mm100int;
+        if (delta >= 0.5) mm100int++;
+            return mm100int / 100.0;
+    }
 
-            {
-                DecimalFormat e = new DecimalFormat("##.##");
-                System.out.printf("");
-                System.out.println(e.format(q));
+    public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
+        int m=scanner.nextInt();
+        double result= getWeight(m);
+        System.out.println(result);
+    } }
 
-            }
-        }}}}}}
